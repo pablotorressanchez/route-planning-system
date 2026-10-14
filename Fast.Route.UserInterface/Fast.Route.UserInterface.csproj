@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e35729be-f601-417d-bc63-9ecc6434db44</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fast.Route.Logic\Fast.Route.Logic.csproj" />
+    <ProjectReference Include="..\Fast.Route.Models\Fast.Route.Models.csproj" />
+  </ItemGroup>
+
+</Project>

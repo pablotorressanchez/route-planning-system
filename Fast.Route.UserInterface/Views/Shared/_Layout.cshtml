@@ -1,0 +1,44 @@
+﻿@using Fast.Route.Models;
+@using Fast.Route.Models.App;
+@using Fast.Route.Logic;
+@using Microsoft.Extensions.Options;
+
+@inject IOptions<AppSettings> appSettings;
+@{
+    AppLogic _appLogic = new AppLogic(appSettings.Value);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Route Planning</title>
+    <link rel="icon" type="image/png" href="~/img/favicon.png">
+    
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tailwind.css" asp-append-version="true" />
+    @if (IsSectionDefined("Css"))
+    {
+        @RenderSection("Css", required: false)
+    }
+</head>
+<body>
+    @await Html.PartialAsync("_Sidebar")
+    <div class="main-content fixed z-40 px-[30px] right-0 top-0 bottom-0 transition-all transition-discrete duration-700 delay-700 flex flex-col bg-gray-50 dark:bg-gray-700" style="z-index: 80">
+        @await Html.PartialAsync("_TopNavbar")
+        @RenderBody()
+    </div>
+
+    @await Html.PartialAsync("~/Views/App/Modal/_Default.cshtml", await _appLogic.ManageProgram(null));
+    @await Html.PartialAsync("~/Views/App/Modal/_Drawer.cshtml", await _appLogic.AddUpdProgram(null));
+    @await Html.PartialAsync("~/Views/App/Modal/_Popup.cshtml", new ModalPopupModel());
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

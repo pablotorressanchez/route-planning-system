@@ -1,0 +1,87 @@
+﻿.sidebar.toggle-sidebar {
+    width: 64px !important;
+}
+
+.sidebar, .sidebar.toggle-sidebar:hover {
+    width: 256px !important;
+}
+
+/*Open Menu*/
+.sidebar.sidebar-header .open-sidebar .burger-menu {
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.sidebar-header .open-sidebar .burger-menu span {
+    height: 1px;
+    width: 25px;
+    /* background: #2a2a2a; */
+    display: block;
+    margin: 6px 0;
+}
+
+.sidebar-header .open-sidebar .burger-menu span:hover {
+    background-color: #ffffff;
+}
+
+/*End Open Menu*/
+
+/*Main Content*/
+.main-content {
+    left: 256px !important;
+}
+
+.main-content.hide-sidebar {
+    left: 64px !important;
+}
+/*End Main Content*/
+
+/*Modal*/
+.modal-drawer.display {
+    z-index: 99 !important;
+    width: 100% !important;
+}
+.modal-drawer .content {
+    z-index: 99 !important;
+}
+
+.modal-drawer .content.display {
+    /*z-index: 99 !important;*/
+    width: 100% !important;
+    @media (width >= 48rem /* 768px */ ) {
+        width: 30% !important;
+    }
+}
+@media (width >= 64rem /* 1024px */ ) {
+        width: 30% !important;
+    }
+}
+.modal-drawer .content .body {
+    /*@apply min-h-0 flex flex-1 min-w-0;*/
+}
+.modal {
+    z-index: 99 !important;
+    height: 0 !important;
+}
+.modal .content {
+   /*@apply relative w-full md:p-4 md:max-h-full;*/
+}
+.popup-modal.display,
+.modal.display {
+    height: 100% !important;
+    max-height: 100% !important;
+}
+.modal .content.small-modal {
+    max-width: 28rem !important;
+}
+.modal .content.large-modal {
+    max-width: 42rem !important;
+}
+.modal .content.extra-large-modal {
+    max-width: 56rem !important;
+}
+.modal .content.default-modal {
+    max-width: 24rem !important;
+}
+/*End Modal*/
