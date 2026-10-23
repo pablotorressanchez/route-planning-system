@@ -188,15 +188,15 @@ The Haversine formula estimates the great-circle distance between two geographic
 
 For two points with latitude and longitude \((\varphi_1,\lambda_1)\) and \((\varphi_2,\lambda_2)\):
 
-\[
+$$
 a = \sin^2\left(\frac{\Delta\varphi}{2}\right)
 + \cos(\varphi_1)\cos(\varphi_2)
 \sin^2\left(\frac{\Delta\lambda}{2}\right)
-\]
+$$
 
-\[
+$$
 d = 2R\arcsin(\sqrt{a})
-\]
+$$
 
 Where:
 
@@ -238,13 +238,13 @@ During clustering, each group center is recalculated using the average latitude 
 
 For a group containing \(n\) customers:
 
-\[
+$$
 \overline{\varphi} = \frac{1}{n}\sum_{i=1}^{n}\varphi_i
-\]
+$$
 
-\[
+$$
 \overline{\lambda} = \frac{1}{n}\sum_{i=1}^{n}\lambda_i
-\]
+$$
 
 The assignment and centroid update process is repeated according to the configured iteration count.
 
