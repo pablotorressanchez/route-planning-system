@@ -399,7 +399,7 @@ Screenshots should use synthetic or anonymized customer data.
 
 ### Main Application
 
-![ASP.NET Core MVC application interface](Fast.Route.UserInterface\wwwroot\docs\screenshots\main-application.png)
+![ASP.NET Core MVC application interface](Fast.Route.UserInterface/wwwroot/docs/screenshots/main-application.png)
 
 ### Customer Geographic Distribution
 
@@ -411,11 +411,11 @@ Screenshots should use synthetic or anonymized customer data.
 
 ### Visit Sequencing
 
-![Visit sequence identifiers displayed on the map](Fast.Route.UserInterface\wwwroot\docs\screenshots\visit-sequencing.png)
+![Visit sequence identifiers displayed on the map](Fast.Route.UserInterface/wwwroot/docs/screenshots/visit-sequencing.png)
 
 ### Planning Results
 
-![Generated groups and saved planning information](Fast.Route.UserInterface\wwwroot\docs\screenshots\planning-result.png)
+![Generated groups and saved planning information](Fast.Route.UserInterface/wwwroot/docs/screenshots/planning-result.png)
 
 
 Suggested directory:
